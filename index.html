@@ -1,99 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto FullStack</title>
-    <link rel="stylesheet" href="assets/stylesheet/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Em construção — Voltamos logo!</title>
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#">
-                <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
-            </a>
-
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="navbarBasicExample" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item">
-                    Inicio
-                </a>
-
-                <a class="navbar-item" href="https://bulma.io/documentation/" target="_blank">
-
-                    Documentação
-                </a>
-
-                <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-link">
-                        Veja mais
-                    </a>
-
-                    <div class="navbar-dropdown">
-                        <a class="navbar-item">
-                            Sobre mim
-                        </a>
-                        <a class="navbar-item">
-                            Trabalhos
-                        </a>
-                        <a class="navbar-item">
-                            Contato
-                        </a>
-                        <hr class="navbar-divider">
-                        <a class="navbar-item">
-                            Informe um erro
-                        </a>
-                    </div>
-                </div>
-            </div>
+<canvas id="bg"></canvas>
 
 
-        </div>
-    </nav>
-    <div class="container">
-        <div class="title">
-            <h1>Curso FullStack JavaScript</h1>
-        </div>
-        <div class="subtitle">
-            <p>Seja bem vindo ao meu plano de estudo e demais atividades propostas pelo curso </p>
-        </div>
-        <section>
-            <div class="menu">
+<main class="card">
+<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect rx='20' width='120' height='120' fill='%23FFDE7D'/><text x='50%' y='55%' font-size='20' text-anchor='middle' font-family='Arial' fill='%23333'>Thiago</text></svg>" alt="logo" class="logo">
+<h1>Estamos construindo algo incrível 🚧</h1>
+<p class="lead">Sinta-se livre para brincar com o fundo — movimente o mouse, clique e explore!</p>
 
-                <ul class="menu-list">
-                    <p>HTML PURO</p>
-                    <li><a href="plano_aula/plano.html">Ir para plano de aula</a></li>
-                    <li><a href="galaxias/index.html">Ir para Guia das Galáxias</a></li>
-                    <li><a href="satelites_naturais/index.html">Ir para Satelites Naturais</a></li>
-                </ul>
 
-                <h1>Dominando CSS</h1>
-                <ul class="menu-list">
-                    <li><a href="treino_astronauta/index.html">Treinamento de astronauta</a></li>
-                </ul>
+<div class="actions">
+<input id="email" type="email" placeholder="Deixe seu e‑mail pra avisar quando lançar" aria-label="E-mail">
+<button id="subscribe">Me avise</button>
+</div>
 
-            </div>
-        </section>
-    </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>.
-            </p>
-            <p>
-                <strong>haptore</strong> Um site desenvolvido durante o curso FullStack JavaScript+CSS por <a href="#">Thiago Vaz.</a>
-            </p>
-        </div>
-    </footer>
+
+<div class="hint">Dica: clique para criar um estouro de partículas. Pressione <kbd>C</kbd> para mudar as cores.</div>
+</main>
+
+
+<footer class="footer">&copy; <span id="year"></span> Em construção — Volte sempre :)</footer>
+
+
+<script src="script.js"></script>
 </body>
-
 </html>
