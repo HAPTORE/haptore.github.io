@@ -1,33 +1,297 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Em construção — Voltamos logo!</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Thiago Vaz — Desenvolvedor .NET</title>
+  <meta name="description" content="Currículo de Thiago Vaz, desenvolvedor .NET e analista de sistemas em Cuiabá, MT." />
+  <meta name="theme-color" content="#f6efe4" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23c4673f'/><path d='M14 32 32 16l18 16v18H38V38H26v12H14z' fill='%23fdf8f0'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    // Aplica o tema salvo antes da pintura para evitar "piscada"
+    (function () {
+      try {
+        var t = localStorage.getItem('tema');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
-<canvas id="bg"></canvas>
+  <a class="skip" href="#sala">Pular para o conteúdo</a>
 
+  <header class="topo">
+    <a class="marca" href="#inicio" aria-label="Início">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" /><path d="M14 32 32 16l18 16v18H38V38H26v12H14z" /></svg>
+      <span>Thiago Vaz</span>
+    </a>
+    <nav aria-label="Cômodos">
+      <ul>
+        <li><a href="#sala">Sala</a></li>
+        <li><a href="#corredor">Trajetória</a></li>
+        <li><a href="#estante">Estante</a></li>
+        <li><a href="#oficina">Oficina</a></li>
+        <li><a href="#varanda">Varanda</a></li>
+      </ul>
+    </nav>
+    <button class="tema" id="tema" type="button" aria-label="Alternar tema claro/escuro">
+      <svg class="sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" /><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" /></svg>
+      <svg class="lua" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" /></svg>
+    </button>
+  </header>
 
-<main class="card">
-<img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><rect rx='20' width='120' height='120' fill='%23FFDE7D'/><text x='50%' y='55%' font-size='20' text-anchor='middle' font-family='Arial' fill='%23333'>Thiago Vaz</text></svg>" alt="logo" class="logo">
-<h1>Estamos construindo algo incrível 🚧</h1>
-<p class="lead">Sinta-se livre para brincar com o fundo — movimente o mouse, clique e explore!</p>
+  <main>
+    <!-- Porta de entrada -->
+    <section class="entrada" id="inicio">
+      <div class="luz" aria-hidden="true"></div>
+      <div class="entrada-texto revela">
+        <p class="sobrescrito">Entre, a casa é sua.</p>
+        <h1>Olá, eu sou o <em>Thiago Vaz</em>.</h1>
+        <p class="cargo">Desenvolvedor .NET · Analista de Sistemas</p>
+        <p class="intro">Construo sistemas que deixam o trabalho das pessoas mais leve: do back end em C# à infraestrutura que mantém tudo de pé.</p>
+        <div class="acoes">
+          <a class="botao" href="#varanda">Vamos conversar</a>
+          <a class="botao vazado" href="#corredor">Ver trajetória</a>
+        </div>
+        <p class="local">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12z" /><circle cx="12" cy="10" r="2.5" /></svg>
+          Cuiabá, Mato Grosso · Brasil
+        </p>
+      </div>
 
+      <div class="casinha revela" aria-hidden="true">
+        <svg viewBox="0 0 320 300">
+          <path class="chamine" d="M212 70h26v52h-26z" />
+          <g class="fumaca"><circle cx="225" cy="52" r="9" /><circle cx="236" cy="34" r="7" /><circle cx="246" cy="18" r="5" /></g>
+          <path class="telhado" d="M30 150 160 46l130 104z" />
+          <path class="parede" d="M58 140h204v140H58z" />
+          <path class="porta" d="M136 198a24 24 0 0 1 48 0v82h-48z" />
+          <circle class="macaneta" cx="174" cy="242" r="3.5" />
+          <rect class="janela" x="80" y="170" width="38" height="38" rx="5" />
+          <rect class="janela" x="202" y="170" width="38" height="38" rx="5" />
+          <path class="caixilho" d="M99 170v38M80 189h38M221 170v38M202 189h38" />
+          <text class="iniciais" x="160" y="128" text-anchor="middle">TV</text>
+          <path class="chao" d="M10 280h300" />
+        </svg>
+      </div>
+    </section>
 
-<div class="actions">
-<input id="email" type="email" placeholder="Deixe seu e‑mail pra avisar quando lançar" aria-label="E-mail">
-<button id="subscribe">Me avise</button>
-</div>
+    <!-- Sala: sobre -->
+    <section class="comodo" id="sala">
+      <header class="comodo-titulo revela">
+        <span class="etiqueta">A sala</span>
+        <h2>Um pouco sobre mim</h2>
+      </header>
+      <div class="sala-grade">
+        <div class="cartao sobre revela">
+          <p>Sou desenvolvedor de software e profissional de TI com experiência em <strong>suporte técnico</strong>, <strong>infraestrutura corporativa</strong> e <strong>desenvolvimento de aplicações</strong>.</p>
+          <p>Atuo em projetos de transformação digital, manutenção de sistemas e criação de soluções tecnológicas voltadas à eficiência operacional. Comecei cuidando de redes e usuários no setor de TI do Exército, passei por ERP, Ruby on Rails e hoje trabalho principalmente com <strong>C# e .NET</strong>.</p>
+          <p>Gosto de entender o problema de quem está do outro lado da tela antes de escrever a primeira linha de código.</p>
+        </div>
+        <ul class="numeros revela">
+          <li><strong data-desde="2014">10+</strong><span>anos em TI</span></li>
+          <li><strong data-desde="2019">5+</strong><span>anos desenvolvendo</span></li>
+          <li><strong>B.Sc.</strong><span>Ciência da Computação</span></li>
+        </ul>
+      </div>
+    </section>
 
+    <!-- Corredor: experiência -->
+    <section class="comodo" id="corredor">
+      <header class="comodo-titulo revela">
+        <span class="etiqueta">O corredor de retratos</span>
+        <h2>Trajetória profissional</h2>
+      </header>
 
-<div class="hint">Dica: clique para criar um estouro de partículas. Pressione <kbd>C</kbd> para mudar as cores.</div>
-</main>
+      <ol class="linha">
+        <li class="revela">
+          <div class="quando">nov 2022 — atual</div>
+          <div class="cartao">
+            <h3>Analista de Sistemas de TI</h3>
+            <p class="onde">SESC MT · Cuiabá, MT</p>
+            <ul>
+              <li>Desenvolvimento e manutenção de sistemas internos.</li>
+              <li>Participação em projetos de transformação digital.</li>
+              <li>Desenvolvimento de aplicativo institucional e soluções corporativas.</li>
+              <li>Suporte técnico e infraestrutura de TI.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="revela">
+          <div class="quando">jul 2021 — nov 2022</div>
+          <div class="cartao">
+            <h3>Desenvolvedor Back End</h3>
+            <p class="onde">CRP Tecnologia · Cuiabá, MT</p>
+            <ul>
+              <li>Desenvolvimento back end com .NET e C#.</li>
+            </ul>
+            <p class="tags"><span>C#</span><span>.NET</span><span>LINQ</span></p>
+          </div>
+        </li>
+        <li class="revela">
+          <div class="quando">set 2019 — jul 2021</div>
+          <div class="cartao">
+            <h3>Analista de Sistema</h3>
+            <p class="onde">RTA Engenheiros · Cuiabá e região</p>
+            <ul>
+              <li>Back end em Ruby on Rails; front end com HTML, CSS e JavaScript.</li>
+              <li>Banco de dados MySQL.</li>
+              <li>Ambientes CentOS e Docker; conhecimento em Tomcat e WildFly (JBoss).</li>
+            </ul>
+            <p class="tags"><span>Ruby on Rails</span><span>MySQL</span><span>Docker</span></p>
+          </div>
+        </li>
+        <li class="revela">
+          <div class="quando">fev 2019 — set 2019</div>
+          <div class="cartao">
+            <h3>Analista de Suporte</h3>
+            <p class="onde">Athivalog · Várzea Grande, MT</p>
+            <ul>
+              <li>Desenvolvimento ADVPL e banco de dados MySQL.</li>
+              <li>Suporte de rede avançado e firewalls (FortiGate, Aker, pfSense); servidores Windows Server.</li>
+              <li>ERP Protheus: rotinas fiscal, compras, financeiro, contábil e TMS.</li>
+            </ul>
+            <p class="tags"><span>ADVPL</span><span>Protheus</span><span>Redes</span></p>
+          </div>
+        </li>
+        <li class="revela">
+          <div class="quando">jul 2014 — jul 2018</div>
+          <div class="cartao">
+            <h3>Soldado · Setor de TI</h3>
+            <p class="onde">Exército Brasileiro · 9º Batalhão de Engenharia de Construção</p>
+            <ul>
+              <li>Gerenciamento de rede com firewall pfSense e de aplicações internas em VMware.</li>
+              <li>Responsável pelo suporte aos usuários.</li>
+              <li>Gestão de aquisições e contratos de serviços de TI.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
 
+      <details class="antes revela">
+        <summary>Antes da TI</summary>
+        <ul>
+          <li><strong>Fort Atacadista</strong> — Prevenção de perdas · mai 2014 — jul 2014</li>
+          <li><strong>Cobra Rolamentos e Autopeças</strong> — Menor aprendiz · jul 2011 — jun 2013</li>
+        </ul>
+      </details>
 
-<footer class="footer">&copy; <span id="year"></span> Em construção — Volte sempre :)</footer>
+      <div class="formacao revela">
+        <h3>Formação</h3>
+        <div class="formacao-grade">
+          <div class="cartao">
+            <p class="quando">ago 2017 — ago 2021</p>
+            <h4>Bacharelado em Ciência da Computação</h4>
+            <p class="onde">UNIC — Universidade de Cuiabá</p>
+          </div>
+          <div class="cartao">
+            <p class="quando">2013</p>
+            <h4>Ensino Médio</h4>
+            <p class="onde">Colégio Isaac Newton</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Estante: habilidades -->
+    <section class="comodo" id="estante">
+      <header class="comodo-titulo revela">
+        <span class="etiqueta">A estante</span>
+        <h2>Ferramentas que uso no dia a dia</h2>
+      </header>
+      <div class="estante">
+        <div class="prateleira revela">
+          <h3>Back end</h3>
+          <ul><li class="destaque">C#</li><li class="destaque">.NET</li><li class="destaque">LINQ</li><li>Ruby on Rails</li><li>ADVPL</li></ul>
+        </div>
+        <div class="prateleira revela">
+          <h3>Front end &amp; dados</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>MySQL</li></ul>
+        </div>
+        <div class="prateleira revela">
+          <h3>DevOps &amp; servidores</h3>
+          <ul><li class="destaque">Azure DevOps</li><li>Docker</li><li>CentOS</li><li>Windows Server</li><li>Tomcat</li><li>WildFly / JBoss</li><li>VMware</li></ul>
+        </div>
+        <div class="prateleira revela">
+          <h3>Redes &amp; sistemas</h3>
+          <ul><li>pfSense</li><li>FortiGate</li><li>Aker</li><li>ERP Protheus</li><li>Suporte técnico</li></ul>
+        </div>
+      </div>
+    </section>
 
-<script src="script.js"></script>
+    <!-- Oficina: projetos -->
+    <section class="comodo" id="oficina">
+      <header class="comodo-titulo revela">
+        <span class="etiqueta">A oficina</span>
+        <h2>Projetos</h2>
+        <p class="subtitulo">Trabalhos feitos durante o curso Java Full Stack, guardados aqui neste mesmo site.</p>
+      </header>
+      <div class="projetos">
+        <a class="projeto revela" href="galaxias/index.html">
+          <img src="assets/images/andromeda.jpg" alt="" loading="lazy" />
+          <div><h3>Guia das Galáxias</h3><p>Páginas sobre Andrômeda, Olho Negro e Nuvens de Magalhães.</p><span class="tags"><span>HTML</span><span>CSS</span></span></div>
+        </a>
+        <a class="projeto revela" href="satelites_naturais/index.html">
+          <img src="assets/images/lua.jpg" alt="" loading="lazy" />
+          <div><h3>Satélites Naturais</h3><p>Conteúdo sobre as luas do Sistema Solar.</p><span class="tags"><span>HTML</span><span>CSS</span></span></div>
+        </a>
+        <a class="projeto revela" href="spacex/index.html">
+          <img src="assets/images/falcon_9.jpg" alt="" loading="lazy" />
+          <div><h3>SpaceX</h3><p>Site com páginas de naves e formulário de contratação.</p><span class="tags"><span>HTML</span><span>Bulma</span></span></div>
+        </a>
+        <a class="projeto revela" href="treino_astronauta/index.html">
+          <img src="assets/images/treinamento_bg.jpg" alt="" loading="lazy" />
+          <div><h3>Treinamento de Astronautas</h3><p>Página temática de treinamento espacial.</p><span class="tags"><span>HTML</span><span>CSS</span></span></div>
+        </a>
+        <a class="projeto revela" href="cadastro/index.html">
+          <img src="assets/images/sistemasolar.jpg" alt="" loading="lazy" />
+          <div><h3>Liga dos Astronautas</h3><p>Formulário de cadastro com validação.</p><span class="tags"><span>HTML</span><span>JavaScript</span></span></div>
+        </a>
+        <a class="projeto revela" href="pesquisa_google/index.html">
+          <img src="assets/images/javascript_bg.jpg" alt="" loading="lazy" />
+          <div><h3>Pesquisa</h3><p>Réplica simples de uma página de busca.</p><span class="tags"><span>HTML</span><span>CSS</span></span></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Varanda: contato -->
+    <section class="comodo" id="varanda">
+      <div class="varanda revela">
+        <span class="etiqueta">A varanda</span>
+        <h2>Senta aí, vamos tomar um café?</h2>
+        <p>Estou aberto a conversar sobre projetos, oportunidades ou só trocar uma ideia sobre tecnologia.</p>
+        <ul class="contatos">
+          <li>
+            <a href="mailto:tiago-frank@hotmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3.5 6 8.5 7 8.5-7" /></svg>
+              tiago-frank@hotmail.com
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/thiago-vaz-dev/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" /><path d="M8 10v7M8 7v.01M12 17v-7M12 13a3 3 0 0 1 6 0v4" /></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/haptore" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.3-4-2-6-2.5M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21" /></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Feito à mão em Cuiabá · &copy; <span id="ano"></span> Thiago Vaz · Volte sempre ☕</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
