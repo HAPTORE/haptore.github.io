@@ -26,9 +26,21 @@ document.querySelectorAll('[data-desde]').forEach(function (el) {
   document.getElementById('tema').addEventListener('click', function () {
     var novo = temaAtual() === 'dark' ? 'light' : 'dark';
     raiz.setAttribute('data-theme', novo);
+    raiz.removeAttribute('data-tema-origem');
     try { localStorage.setItem('tema', novo); } catch (e) {}
     atualizaMeta();
   });
+
+  // Tema pelo horário: reavalia a cada minuto para virar a noite às 18h
+  setInterval(function () {
+    if (raiz.getAttribute('data-tema-origem') !== 'horario') return;
+    var h = new Date().getHours();
+    raiz.setAttribute('data-theme', h >= 18 || h < 6 ? 'dark' : 'light');
+    atualizaMeta();
+  }, 60000);
+
+  // Acompanha mudanças no tema do navegador
+  if (prefereEscuro.addEventListener) prefereEscuro.addEventListener('change', atualizaMeta);
   atualizaMeta();
 })();
 
