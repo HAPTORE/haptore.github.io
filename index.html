@@ -13,20 +13,16 @@
   <link rel="stylesheet" href="styles.css" />
   <script>
     // Define o tema antes da pintura para evitar "piscada":
-    // 1) escolha salva pelo visitante; 2) tema do navegador (tratado no CSS);
-    // 3) sem preferência do navegador, usa o horário (noite das 18h às 6h)
+    // 1) escolha salva pelo visitante (botão sol/lua);
+    // 2) sem escolha salva, usa o horário do visitante (noite das 18h às 6h)
     (function () {
       var raiz = document.documentElement;
       var salvo = null;
       try { salvo = localStorage.getItem('tema'); } catch (e) {}
       if (salvo) { raiz.setAttribute('data-theme', salvo); return; }
-      var mm = window.matchMedia;
-      var navegadorInforma = !!mm && (mm('(prefers-color-scheme: dark)').matches || mm('(prefers-color-scheme: light)').matches);
-      if (!navegadorInforma) {
-        var h = new Date().getHours();
-        raiz.setAttribute('data-theme', h >= 18 || h < 6 ? 'dark' : 'light');
-        raiz.setAttribute('data-tema-origem', 'horario');
-      }
+      var h = new Date().getHours();
+      raiz.setAttribute('data-theme', h >= 18 || h < 6 ? 'dark' : 'light');
+      raiz.setAttribute('data-tema-origem', 'horario');
     })();
   </script>
 </head>

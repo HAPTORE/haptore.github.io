@@ -39,8 +39,6 @@ document.querySelectorAll('[data-desde]').forEach(function (el) {
     atualizaMeta();
   }, 60000);
 
-  // Acompanha mudanças no tema do navegador
-  if (prefereEscuro.addEventListener) prefereEscuro.addEventListener('change', atualizaMeta);
   atualizaMeta();
 })();
 
